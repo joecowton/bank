@@ -1,18 +1,17 @@
 (function(exports){
 
-  function Statement(){
-    this.transactions = [];
-  }
-
-  Statement.prototype = {
+  class Statement{
+    constructor(){
+      this.transactions = [];
+    }
 
     add(transaction){
       this.transactions.push(transaction);
-    },
+    }
 
     print(){
       console.log('date || credit || debit || balance');
-      this.transactions.forEach (function(transaction, index){
+      this.transactions.forEach ((transaction, index) => {
         console.log(transaction.toString());
       })
     }
