@@ -1,6 +1,6 @@
 (function(exports){
 
-  class Statement{
+  class Statement {
     constructor(){
       this.transactions = [];
     }

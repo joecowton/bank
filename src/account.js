@@ -1,28 +1,27 @@
 (function(exports){
 
-  function Account(statement = Statement, transaction = Transaction){
-    this.statement = new statement;
-    this.transaction = transaction;
-    this._balance = 0;
-  }
+  class Account {
+    constructor(statement = Statement, transaction = Transaction){
+      this.statement = new statement;
+      this.transaction = transaction;
+      this._balance = 0;
+    }
 
-  Account.prototype = {
-
-    balance: function(){
+    balance(){
       return this._balance;
-    },
+    }
 
-    deposit: function(amount){
+    deposit(amount){
       this._balance += amount;
       this.statement.add(new this.transaction(amount, this._balance))
-    },
+    }
 
-    withdraw: function(amount){
+    withdraw(amount){
       this._balance -= amount;
       this.statement.add(new this.transaction(amount, this._balance))
-    },
+    }
 
-    printStatement: function(){
+    printStatement(){
       this.statement.print()
     }
   }
