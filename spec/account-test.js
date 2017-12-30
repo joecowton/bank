@@ -19,17 +19,20 @@ describe("Account", function(){
 
     it('should add transaction to statement', function(){
       account.deposit(10)
-      expect(account.statement.transactions[0]).toEqual('30/12/2017 || £0.00|| £10.00 || £0.00');
+      var transaction = '[ 30/12/2017 || £0.00|| £10.00 || £0.00 ]'
+      expect(account.statement.transactions).toEqual(transaction);
+    })
+
+    it('should throw error if insucfficent funds', function(){
+      expect(function(){ account.withdraw(11) }).toThrow('Insufficent funds')
     })
   });
 
   describe('withdraw', function(){
-    it('should withraw amount from to balance', function(){
+    it('should withdraw amount from to balance', function(){
+      account._balance = 20;
       account.withdraw(10)
-      expect(account.balance()).toEqual(-10);
+      expect(account.balance()).toEqual(10);
     });
   });
-
-
-
 });

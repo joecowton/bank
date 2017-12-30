@@ -17,8 +17,12 @@
     }
 
     withdraw(amount){
-      this._balance -= amount;
-      this.statement.add(new this.transaction(amount, this._balance))
+      if (amount < this._balance) {
+        this._balance -= amount;
+        this.statement.add(new this.transaction(amount, this._balance))
+      } else {
+        throw("Insufficent funds")
+      }
     }
 
     printStatement(){
