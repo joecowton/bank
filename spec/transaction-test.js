@@ -6,7 +6,7 @@ describe("Transaction", function() {
 
   describe('toString', function(){
     it('should return account balance', function(){
-      expect(transaction.toString()).toEqual('30/12/2017 || £0.00|| £10.00 || £0.00');
+      expect(transaction.toString()).toEqual('30/12/2017 || £0.00 || £10.00 || £0.00');
     });
   });
 

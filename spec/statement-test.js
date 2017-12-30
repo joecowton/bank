@@ -14,11 +14,4 @@ describe("Statement", function() {
       expect(statement.transactions).toEqual([transactionOne, transactionTwo]);
     });
   });
-
-  // describe('print', function (){
-  //   it('should print items', function(){
-  //     statement.add(transactionOne)
-  //     expect(statement.print()).toEqual('30/12/2017 || £0.00|| £10.00 || £0.00');
-  //   });
-  // });
 });

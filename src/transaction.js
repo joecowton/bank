@@ -8,7 +8,7 @@
     }
 
     toString() {
-      return `${this._date} || ${this.amountString(this.credit)}|| ${this.amountString(this.debit)} || ${this.amountString(this._balance)}`
+      return `${this._date} || ${this.amountString(this.credit)} || ${this.amountString(this.debit)} || ${this.amountString(this._balance)}`
     }
 
     amountString(amount = 0) {
