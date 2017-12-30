@@ -16,6 +16,11 @@ describe("Account", function(){
       account.deposit(10)
       expect(account.balance()).toEqual(10);
     });
+
+    it('should add transaction to statement', function(){
+      account.deposit(10)
+      expect(account.statement.transactions[0]).toEqual('30/12/2017 || £0.00|| £10.00 || £0.00');
+    })
   });
 
   describe('withdraw', function(){
