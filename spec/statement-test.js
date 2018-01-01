@@ -1,7 +1,7 @@
 describe("Statement", function() {
 
-  var transactionOne = '30/12/2017 || £0.00|| £10.00 || £0.00'
-  var transactionTwo = '30/12/2017 || £0.00|| £10.00 || £0.00'
+  var transactionOne = '30/12/2017 ||  || £10.00 || £0.00'
+  var transactionTwo = '30/12/2017 || £10.00 ||  || £0.00'
 
   beforeEach(function(){
     statement = new Statement();

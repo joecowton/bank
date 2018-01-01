@@ -1,6 +1,9 @@
 describe("Account", function(){
 
   var account;
+  var mockDeposit = new Transaction(10, 10)
+  var mockWithraw = new Transaction(-10, 10)
+
   beforeEach(function(){
     account = new Account();
   });
@@ -19,8 +22,7 @@ describe("Account", function(){
 
     it('should add transaction to statement', function(){
       account.deposit(10)
-      var transaction = '30/12/2017 || £0.00 || £10.00 || £10.00'
-      expect(account.statement.transactions[0]).toEqual( '30/12/2017 || £0.00 || £10.00 || £10.00' );
+      expect(account.statement.transactions[0]).toEqual(jasmine.objectContaining(mockDeposit));
     });
 
     it('should throw error if insucfficent funds', function(){
@@ -34,5 +36,11 @@ describe("Account", function(){
       account.withdraw(10)
       expect(account.balance()).toEqual(10);
     });
+
+    it('should add transaction to statement', function() {
+      account._balance = 20;
+      account.withdraw(10)
+      expect(account.statement.transactions[0]).toEqual(jasmine.objectContaining(mockWithraw));
+    })
   });
 });
