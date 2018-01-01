@@ -11,7 +11,7 @@
 
     print(){
       console.log('date || credit || debit || balance');
-      this.transactions.forEach ((transaction, index) => {
+      this.transactions.reverse().forEach ((transaction, index) => {
         console.log(transaction.toString());
       })
     }
