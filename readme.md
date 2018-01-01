@@ -4,8 +4,6 @@ https://github.com/makersacademy/course/blob/master/individual_challenges/bank_t
 
 A basic command-line bank account simulation with deposit, withdraw and print statement functionality via account, statement and transaction objects.
 
-#### Account commands:
-
 ### deposit(amount):
 
 Changes balance by amount passed as an argument and creates new transaction object, adding it to the statement.
