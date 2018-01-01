@@ -6,21 +6,21 @@ A JavaScript command-line bank account simulation with deposit, withdraw and pri
 
 ### Commands
 
-#### deposit(amount):
+#### deposit(amount)
 
 Changes balance by amount passed as an argument and creates new transaction object, adding it to the statement.
 
 Raises 'Insufficent funds' error if amount to withdraw is greater than available balance.
 
-#### withdraw(amount):
+#### withdraw(amount)
 
 Changes balance by the amount passed as an argument and creates new transaction object, adding it to the statement.
 
-#### printStatement():
+#### printStatement()
 
 Prints formatted statement of transactions complete with headers.
 
-### To Run:
+### To Run
 
 open index.html
 
