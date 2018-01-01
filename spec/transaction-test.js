@@ -3,7 +3,7 @@ describe("Transaction", function() {
   beforeEach(function(){
     transaction = new Transaction(10, 0);
   });
-
+  
   describe('toString', function(){
     it('should return account balance in correct format', function(){
       var result = '01/01/2018 || £10.00 ||  || £0.00';

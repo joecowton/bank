@@ -8,11 +8,11 @@
     }
 
     toString() {
-      return `${this._date} || ${this.amountString(this.credit)} || ${this.amountString(this.debit)} || £${this._balance.toFixed(2)}`
+      return `${this._date} || ${this.amountString(this.credit)} || ${this.amountString(this.debit)} || £${this._balance.toFixed(2)}`;
     }
 
     amountString(amount = 0) {
-      return amount != 0 ? `£${amount.toFixed(2)}` : ""
+      return amount != 0 ? `£${amount.toFixed(2)}` : "";
     }
   }
 
