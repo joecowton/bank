@@ -7,6 +7,12 @@ describe("Statement", function() {
     statement = new Statement();
   });
 
+  describe('constructor', function (){
+    it('should initialize with empty array', function(){
+      expect(statement.transactions).toEqual([]);
+    })
+  })
+
   describe('add', function (){
     it('should add transactions to array', function(){
       statement.add(transactionOne)

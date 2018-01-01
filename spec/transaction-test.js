@@ -6,7 +6,7 @@ describe("Transaction", function() {
 
   describe('toString', function(){
     it('should return account balance in correct format', function(){
-      var result = '01/01/2018 || £10.00 ||  || £0.00'
+      var result = '01/01/2018 || £10.00 ||  || £0.00';
       expect(transaction.toString()).toEqual(result);
     });
   });
