@@ -20,10 +20,6 @@ Prints formatted statement of transactions complete with headers.
 
 ### To run:
 
-clone repository
-
-npm init
-
-npm install
+open index.html
 
 enter irb and create new account
