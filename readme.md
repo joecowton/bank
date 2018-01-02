@@ -4,6 +4,10 @@ https://github.com/makersacademy/course/blob/master/individual_challenges/bank_t
 
 A JavaScript command-line bank account simulation with deposit, withdraw and print statement functionality via account, statement and transaction objects.
 
+Each new account object is constructed with an empty statement object which holds transaction objects in an array. Transaction objects are constructed each time a deposit or withdrawal is made. The transaction object determines whether the transaction has been credit or debit based on whether the value passed from the account object is negative or positive. These are subsequently added to the statement objects array. 
+
+When
+
 ### Commands
 
 #### deposit(amount)
