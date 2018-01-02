@@ -41,8 +41,12 @@ describe("Transaction", function() {
   });
 
   describe('amountString', function(){
-    it('should convert number to string and add £ sign', function(){
+    it('should convert number to string and add £ sign if > 0', function(){
       expect(transaction.amountString(20.00468)).toEqual('£20.00');
+    });
+
+    it('should return empty string if < 0', function(){
+      expect(transaction.amountString(0)).toEqual('');
     });
   });
 });
