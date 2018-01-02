@@ -8,6 +8,17 @@ describe("Account", function(){
     account = new Account();
   });
 
+  describe('constructor', function (){
+    it('should initialize with empty transactions array', function (){
+      expect(account.statement.transactions.length).toEqual(0)
+    });
+
+    it('should initialize with balance of zero', function (){
+      expect(account._balance).toEqual(0)
+    });
+  })
+
+
   describe('balance', function(){
     it('should return account balance', function(){
       expect(account.balance()).toEqual(0);
@@ -25,9 +36,6 @@ describe("Account", function(){
       expect(account.statement.transactions[0]).toEqual(jasmine.objectContaining(mockDeposit));
     });
 
-    it('should throw error if insucfficent funds', function(){
-      expect(function(){ account.withdraw(11) }).toThrow('Insufficent funds')
-    });
   });
 
   describe('withdraw', function(){
@@ -42,5 +50,9 @@ describe("Account", function(){
       account.withdraw(10)
       expect(account.statement.transactions[0]).toEqual(jasmine.objectContaining(mockWithraw));
     })
+
+    it('should throw error if insucfficent funds', function(){
+      expect(function(){ account.withdraw(11) }).toThrow('Insufficent funds')
+    });
   });
 });
