@@ -1,10 +1,10 @@
 (function(exports){
 
   class Transaction {
-    constructor(amount, balance) {
+    constructor(amount, balance, date = new Date().toLocaleDateString()) {
       amount > 0 ? this.credit = amount : this.debit = -amount;
       this._balance = balance;
-      this._date = new Date().toLocaleDateString();
+      this._date = date;
     }
 
     toString() {
