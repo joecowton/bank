@@ -24,8 +24,14 @@ Changes balance by the amount passed as an argument and creates new transaction 
 
 Prints formatted statement of transactions complete with headers.
 
-### To Run
-
+### To run
+```
+git clone: https://github.com/joecowton/bank.git
 open index.html
+enter console and create new account
+```
 
-enter irb and create new account
+### To test
+```
+open specRunner.html
+```
