@@ -24,7 +24,7 @@ Changes balance by the amount passed as an argument and creates new transaction 
 
 Prints formatted statement of transactions complete with headers.
 
-![Alt text](/img/img.png?raw=true "Optional Title")
+![App](/img/img.png)
 
 ### To run
 ```
