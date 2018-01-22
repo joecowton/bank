@@ -24,14 +24,16 @@ Changes balance by the amount passed as an argument and creates new transaction 
 
 Prints formatted statement of transactions complete with headers.
 
+![App](/img/img.png)
+
 ### To run
 ```
-git clone: https://github.com/joecowton/bank.git
-open index.html
-enter console and create new account
+$ git clone: https://github.com/joecowton/bank.git
+$ open index.html
+-> enter console and create account
 ```
 
 ### To test
 ```
-open specRunner.html
+$ open specRunner.html
 ```
