@@ -18,7 +18,6 @@ describe("Account", function(){
     });
   })
 
-
   describe('balance', function(){
     it('should return account balance', function(){
       expect(account.balance()).toEqual(0);
@@ -35,7 +34,6 @@ describe("Account", function(){
       account.deposit(10)
       expect(account.statement.transactions[0]).toEqual(jasmine.objectContaining(mockDeposit));
     });
-
   });
 
   describe('withdraw', function(){

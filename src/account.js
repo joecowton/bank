@@ -29,6 +29,7 @@
       this.statement.print();
     }
   }
+  
   exports.Account = Account;
 
 })(this);
