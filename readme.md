@@ -24,6 +24,8 @@ Changes balance by the amount passed as an argument and creates new transaction 
 
 Prints formatted statement of transactions complete with headers.
 
+![App](/img/img_2.png)
+
 ![App](/img/img.png)
 
 ### To run
